@@ -9,6 +9,20 @@ DEFAULT_HOST=true
 
 source `dirname $(readlink -f $0)`/mulexe.conf
 
+if [ $1 == '--help' ]; then
+   echo ""
+   echo "-c | --config        specify the path of config file, default as same directory of this file"
+   echo "-h | --host          specify the user and hostname "
+   echo "-p | --password      specify the password"
+   echo "--enable-prefix      enable the hostname prefix for each line"
+   echo "--disable-prefix     disable the hostname prefix for each line"
+   echo "--enable-password    enable password authentication for SSH"
+   echo "--disable-password   disable password authentication for SSH"
+   echo ""
+   exit
+fi
+
+
 while [[ $# -gt 1 ]]; do
    key="$1"
 
@@ -57,7 +71,15 @@ while [[ $# -gt 1 ]]; do
          ;;
 
       *)
-         echo "Unknown parameter $1"
+         echo ""
+         echo "-c | --config        specify the path of config file, default as same directory of this file"
+         echo "-h | --host          specify the user and hostname "
+         echo "-p | --password      specify the password"
+         echo "--enable-prefix      enable the hostname prefix for each line"
+         echo "--disable-prefix     disable the hostname prefix for each line"
+         echo "--enable-password    enable password authentication for SSH"
+         echo "--disable-password   disable password authentication for SSH"
+         echo ""
          exit
          ;;
 
