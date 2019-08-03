@@ -103,7 +103,7 @@ $ mulexe 'cat test.log' | sort -t] -k2
 [server-1][2019-08-03 08:02:46.824]*****************
 ```
 
-### Specify server information at command line (without reading mulexe)
+### Specify server information at command line (without reading `mulexe.conf`)
 ```
 $ mulexe \ 
 > -h username@server-2 -p password_2 \ 
