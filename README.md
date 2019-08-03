@@ -13,6 +13,20 @@ The server should be able to connect to the configured server through SSH
 
 ## Example (logged in server-1, configured with server-2)
 
+### Show options
+```
+$ mulexe --help
+
+-c | --config        specify the path of config file, default as same directory of this file
+-h | --host          specify the user and hostname
+-p | --password      specify the password
+--enable-prefix      enable the hostname prefix for each line
+--disable-prefix     disable the hostname prefix for each line
+--enable-password    enable password authentication for SSH
+--disable-password   disable password authentication for SSH
+
+```
+
 ### List file in current directory
 ```
 $ mulexe 'ls /'
