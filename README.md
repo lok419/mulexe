@@ -8,6 +8,9 @@ A shell sciprt enables to execute a command in multiple machine under the same d
 2. Put the files to your $PATH directory e.g. `/usr/local/bin`
 3. Configure the setting in `mulexe.conf` with `username@ipaddress` and `password`
 
+### Requirement
+The server should be able to connect to the configured server through SSH
+
 ## Example (logged in server-1, configured with server-2)
 
 ### List file in current directory
