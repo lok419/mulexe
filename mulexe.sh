@@ -9,7 +9,7 @@ DEFAULT_HOST=true
 
 source `dirname $(readlink -f $0)`/mulexe.conf
 
-if [ $1 == '--help' ]; then
+if [ "$1" == '--help' ]; then
    echo ""
    echo "-c | --config        specify the path of config file, default as same directory of this file"
    echo "-h | --host          specify the user and hostname "
